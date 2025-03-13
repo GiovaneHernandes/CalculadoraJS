@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.display {
+  width: 100%;
+  text-align: right;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.result {
+  font-size: 80px;
+  color: #ddd;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.botao {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  background-color: #505050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.botao:active {
+  background-color: #bbb;
+}
+
+.botao:nth-child(4n) {
+  /* Operadores */
+  background-color: #ff9500;
+}
+
+.botao:nth-child(4n):active {
+  background-color: #e08e00;
+}
+
+.botao:nth-child(-n + 3) {
+  /* AC, +/- e % */
+  background-color: rgb(168, 168, 168);
+  color: black;
+}
+
+@media (max-width: 480px) {
+  .result {
+    font-size: 50px;
+  }
+
+  .botao {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
+}
